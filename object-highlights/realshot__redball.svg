@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" width="768" height="1024">
+<defs><path id="object" d="M373.0,255.5L369.0,254.5L368.0,253.5L359.0,253.5L357.0,252.5L355.5,250.0L355.5,247.0L353.5,245.0L353.5,243.0L351.5,239.0L350.5,231.0L351.5,230.0L351.5,226.0L352.5,224.0L356.0,219.5L359.0,217.5L362.0,217.5L363.0,216.5L374.0,216.5L375.0,217.5L377.0,217.5L382.5,222.0L385.5,228.0L385.5,240.0L383.5,242.0L382.5,246.0L381.5,247.0L382.5,250.0L377.0,253.5L375.0,253.5L373.0,255.5Z" fill-rule="evenodd"/><mask id="background-only" maskUnits="userSpaceOnUse" x="0" y="0" width="768" height="1024" style="mask-type:luminance"><rect width="768" height="1024" fill="white"/><use href="#object" transform="translate(0 512)" fill="black"/></mask></defs>
+<rect width="768" height="1024" fill="#0f1916" opacity=".28" mask="url(#background-only)"/>
+<use href="#object" transform="translate(0 512)" fill="#f59e0b" fill-opacity=".14" stroke="#f59b2f" stroke-width="4" stroke-linejoin="round"/>
+</svg>

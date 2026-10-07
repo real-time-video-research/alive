@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ALIVE makes inserted objects respond to source actions. Explore interaction-aware video editing, a 35,800-pair dataset, and comparisons across diverse videos."><meta name="theme-color" content="#f8f8f5"><title>ALIVE — Bringing inserted objects to life</title><link rel="icon" href="assets/icon.svg?v=eyes30" type="image/svg+xml"><link rel="icon" href="assets/alive-eyes-icon-64.png?v=eyes30" type="image/png" sizes="64x64"><link rel="apple-touch-icon" href="assets/alive-eyes-apple-180.png?v=eyes30" sizes="180x180"><link rel="stylesheet" href="style.css?v=github-gray-text-20261007"><script defer src="data.js?v=github-pages-20261006"></script><script defer src="app.js?v=github-pages-20261006"></script><meta property="og:type" content="website"><meta property="og:title" content="ALIVE: Interaction-Aligned Object Insertion for First-Frame-Guided Video Editing"><meta property="og:description" content="Make inserted objects alive: part of the video’s world, responding to surrounding actions."><meta property="og:url" content="https://real-time-video-research.github.io/alive/index.html"><meta property="og:image" content="https://real-time-video-research.github.io/alive/assets/alive-eyes-share.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ALIVE — a pair of waking eyes with the ALIVE wordmark"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ALIVE: Interaction-Aligned Object Insertion for First-Frame-Guided Video Editing"><meta name="twitter:image" content="https://real-time-video-research.github.io/alive/assets/alive-eyes-share.png"><link rel="canonical" href="https://real-time-video-research.github.io/alive/"></head>
+<body>
+<a class="skip" href="#task">Skip to demonstrations</a>
+<nav class="topbar" aria-label="Main navigation"><a class="wordmark" href="#">ALIVE</a><div class="topbar-links"><div class="nav-link-row section-links"><a href="#explore">Evaluation visualizations</a><a href="#dataset">Datasets</a><a href="#method">Method</a><a href="#comparison">Full comparison</a><a href="#results">Results</a></div></div></nav>
+<header class="hero wrap">
+ <h1 class="hero-title"><span class="title-opening"><span class="title-brand" aria-label="ALIVE"><svg class="hero-wordmark" viewBox="110 200 1960 332" role="img" aria-label="ALIVE with a minimalist pair of waking eyes"><image href="assets/alive-minimal-eyes-v3.png" width="2172" height="724"/></svg></span>: Interaction-Aligned</span> Object Insertion for First-Frame-Guided Video Editing</h1>
+ <div class="authors"><span><a href="https://zhouzhenghong-gt.github.io/" target="_blank" rel="noopener noreferrer">Zhenghong Zhou</a><sup>1</sup></span><span><a href="https://sites.google.com/site/zhelin625/" target="_blank" rel="noopener noreferrer">Zhe Lin</a><sup>2</sup></span><span><a href="https://www.cs.rochester.edu/u/jluo/" target="_blank" rel="noopener noreferrer">Jiebo Luo</a><sup>1, *</sup></span><span><a href="https://yzhouas.github.io/" target="_blank" rel="noopener noreferrer">Yuqian Zhou</a><sup>2, *</sup></span></div>
+ <div class="affiliations"><span><sup>1</sup> University of Rochester</span><span><sup>2</sup> Adobe Research</span></div>
+ <p class="author-note">* Advising authors.</p>
+ <nav class="hero-links hero-section-links" aria-label="Project sections"><div class="nav-link-row resource-links"><a href="https://arxiv.org/abs/2610.08779" target="_blank" rel="noopener noreferrer">Read paper</a><span aria-hidden="true">·</span><a class="github-link" href="https://github.com/zhouzhenghong-gt/ALIVE-code" target="_blank" rel="noopener noreferrer" aria-label="GitHub — Code not yet released" title="Code not yet released"><span>GitHub</span></a></div><div class="nav-link-row section-links"><a href="#explore">Evaluation visualizations</a><span aria-hidden="true">·</span><a href="#dataset">Datasets</a><span aria-hidden="true">·</span><a href="#method">Method</a><span aria-hidden="true">·</span><a href="#comparison">Full comparison</a><span aria-hidden="true">·</span><a href="#results">Results</a></div></nav>
+</header>
+<main>
+
+<section id="task" class="wrap task-section" aria-label="Object insertion demonstrations">
+ <div id="hero-demo" class="task-demo task-comparisons"></div>
+ <p class="task-summary">Make inserted objects “alive”: not merely visible, but part of the video’s world, responding to surrounding actions.</p>
+</section>
+<section id="explore" class="section tinted"><div class="wrap"><div class="heading-row"><h2>Evaluation visualizations</h2></div>
+ <div class="gallery-tools"><nav id="source-links" aria-label="Jump to a video source"></nav><span class="wipe-hint"><span class="hover-tip"><strong>Hover</strong> to play from the start</span><span class="touch-tip">Tap Start edit to play</span> · <b>Start all this row</b> replays the row · <b>Source above</b>, <b>ALIVE below</b></span></div>
+ <div id="source-rows"></div>
+ <p class="release-note">We will release 3D-rendered samples once permission is granted.</p>
+</div></section>
+<section id="dataset" class="wrap section"><div class="heading-row"><h2>Dataset</h2></div>
+ <div class="dataset-example"><div class="mini-heading"><h3>Training examples</h3><p>Total 35,800 editing pairs.</p></div>
+ <div id="training-tabs" class="source-cards" role="group" aria-label="Training source">
+ <button type="button" class="source-card" data-key="humoto" aria-pressed="false" aria-controls="train-example prompt-text"><span class="source-index">01 / RENDER</span><span class="source-name">3D-rendered</span><strong>14,362 <small>pairs</small></strong><span class="source-description">Render the same scene with and without the target object.</span></button>
+ <button type="button" class="source-card" data-key="ioved" aria-pressed="false" aria-controls="train-example prompt-text"><span class="source-index">02 / GENERATE</span><span class="source-name">Model-generated</span><strong>5,896 <small>pairs</small></strong><span class="source-description">Synthesize common interactions, then remove the target.</span></button>
+ <button type="button" class="source-card" data-key="real" aria-pressed="true" aria-controls="train-example prompt-text"><span class="source-index">03 / CURATE</span><span class="source-name">Real-world</span><strong>8,542 <small>pairs</small></strong><span class="source-description">Build pairs from ARCTIC, HOCap, HOI4D and HOT3D.</span></button>
+ <button type="button" class="source-card" data-key="rose" aria-pressed="false" aria-controls="train-example prompt-text"><span class="source-index">04 / COMPLEMENT</span><span class="source-name">General editing</span><strong>7,000 <small>pairs</small></strong><span class="source-description">Include ROSE pairs for insertion without direct interaction.</span></button>
+ </div>
+ <div class="training-picker"><label for="training-select">Example</label><select id="training-select" aria-controls="train-example prompt-text"></select><div class="training-nav"><button id="training-prev" type="button" aria-label="Previous training example">←</button><output id="training-count" aria-live="polite"></output><button id="training-next" type="button" aria-label="Next training example">→</button></div></div>
+ <div class="training-board"><div id="train-example"></div><div class="annotation"><div class="mini-heading"><h3>Prompt levels</h3><p>Annotations of the same video pair.</p></div><div id="prompt-tabs" class="tabs small-tabs" role="group" aria-label="Prompt level"></div><div id="prompt-text"></div></div></div>
+ </div>
+</section>
+<section id="method" class="section tinted"><div class="wrap"><div class="heading-row"><h2>Method</h2></div>
+ <div class="method-summary">
+ <div class="method-intro method-copy">
+ <p class="method-inputs">Inputs: <strong>source video</strong>, <strong>edited first frame</strong>, <strong>P1-level prompt</strong>.</p>
+ <p>The diffusion editor combines source and noisy target latents via <strong>channel concatenation</strong>, keeps the <strong>edited first-frame latent clean</strong>, and uses <strong>text cross-attention</strong> for prompt guidance.</p>
+ <p class="method-guidance">To help infer interactions, a <strong>VLM predicts P4-level prompts</strong> from the same inputs to guide the diffusion editor.</p>
+ </div>
+ <figure class="method-overview"><a href="assets/method.png" target="_blank" rel="noopener" aria-label="Enlarge the ALIVE architecture diagram"><img src="assets/method.png" alt="ALIVE architecture: a first-frame-guided diffusion editor uses P4 chunk prompts predicted by a VLM from the source video, edited first frame, and object name." loading="lazy"></a></figure>
+ </div>
+ <div id="method-demo" aria-label="Mug example: inputs, timed P4 guidance and edited video"></div>
+</div></section>
+<section id="comparison" class="wrap section"><div class="heading-row"><h2>Full comparison</h2></div>
+ <div id="comparison-links" class="comparison-links"></div>
+ <p class="release-note">We will release 3D-rendered samples once permission is granted.</p>
+</section>
+<section id="results" class="section tinted"><div class="wrap"><div class="heading-row"><h2>Results</h2></div>
+ <div class="result-toolbar"><div id="benchmark-tabs" class="tabs" role="group" aria-label="Benchmark"></div><label class="check"><input type="checkbox" id="automatic-metrics" checked> Show automatic metrics</label></div><div id="results-table"></div>
+ <p class="results-eval-note">The Overall, Task, and Motion scores in the table are assigned by GPT-5.6 Sol (high reasoning effort).</p>
+</div></section>
+<section class="wrap closing"><div><h3>Limitations</h3><p>The source video and edited first frame may not fully determine complex object responses, so ALIVE aims for plausible interactions consistent with source actions. Complex deformations and rapid, large-angle rotations remain challenging, and incorrect VLM guidance can cause editing errors. The current editor uses bidirectional video context and does not support streaming generation.</p></div><a class="button primary" href="https://arxiv.org/abs/2610.08779" target="_blank" rel="noopener noreferrer">Paper & appendix</a></section>
+</main><footer class="wrap footer"><span class="wordmark">ALIVE</span><p><a href="https://zhouzhenghong-gt.github.io/" target="_blank" rel="noopener noreferrer">Zhenghong Zhou</a> · <a href="https://sites.google.com/site/zhelin625/" target="_blank" rel="noopener noreferrer">Zhe Lin</a> · <a href="https://www.cs.rochester.edu/u/jluo/" target="_blank" rel="noopener noreferrer">Jiebo Luo</a> · <a href="https://yzhouas.github.io/" target="_blank" rel="noopener noreferrer">Yuqian Zhou</a><br>University of Rochester · Adobe Research</p><a href="#">Back to top ↑</a></footer><noscript><p class="wrap">Enable JavaScript to explore the local video examples and result tables.</p></noscript>
+</body></html>
